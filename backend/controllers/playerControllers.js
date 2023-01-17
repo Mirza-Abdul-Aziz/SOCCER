@@ -12,3 +12,12 @@ export const addNewPlayer = (req, res) => {
     res.json(Player);
   });
 };
+
+export const getPlayers = (req, res) => {
+  PLayer.find({}, (err, Player) => {
+    if (err) {
+      res.send(err);
+    }
+    res.json(Player);
+  });
+};
