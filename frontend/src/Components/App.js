@@ -41,7 +41,13 @@ class App extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col s12">Menu</div>
+          <nav>
+            <div className="nav-wrapper grey darken-3">
+              <a href="#" className="brand-logo">
+                Soccer Management
+              </a>
+            </div>
+          </nav>
         </div>
         <div className="row">
           <div className="col s3">
@@ -51,7 +57,7 @@ class App extends React.Component {
             />
           </div>
           <div className="col s9">
-            <PlayerSingle />
+            <PlayerSingle player={this.state.currentPlayer} />
           </div>
         </div>
         <div className="row">
