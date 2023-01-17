@@ -1,5 +1,6 @@
 import {
   addNewPlayer,
+  deletePlayer,
   getPlayers,
   getPlayerWithId,
   UpdatePlayer,
@@ -21,7 +22,10 @@ const routes = (app) => {
     .put(UpdatePlayer)
 
     //GET specific player with ID
-    .get(getPlayerWithId);
+    .get(getPlayerWithId)
+
+    // Delete specific player
+    .delete(deletePlayer);
 };
 
 export default routes;
