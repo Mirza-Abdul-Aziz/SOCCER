@@ -30,3 +30,17 @@ export const getPlayerWithId = (req, res) => {
     res.json(Player);
   });
 };
+
+export const UpdatePlayer = (req, res) => {
+  Player.findOneAndUpdate(
+    { _id: req.params.PlayerId },
+    req.body,
+    { new: true },
+    (err, Player) => {
+      if (err) {
+        res.send(err);
+      }
+      res.json(Player);
+    }
+  );
+};
