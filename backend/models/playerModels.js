@@ -7,7 +7,7 @@ export const PlayerSchema = new Schema({
     type: String,
     required: true,
   },
-  lasstName: {
+  lastName: {
     type: String,
     required: true,
   },
